@@ -1,0 +1,26 @@
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px #fff solid;
+  z-index: 1000;
+
+  &__block {
+    padding: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px #fff solid;
+    cursor: pointer;
+
+    &:first-child {
+      cursor: default;
+    }
+  }
+
+  &__soon {
+    opacity: .5;
+    cursor: default;
+  }
+}

@@ -1,0 +1,31 @@
+.stats {
+  margin-top: 20px;
+  width: 100%;
+
+  &__title {
+    color: #fff;
+  }
+
+  &__table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    color: #fff;
+
+    td, th {
+      text-align: left;
+      padding: 8px 50px 8px 0;
+    }
+
+    td > th {
+      width: 300px;
+    }
+  }
+
+  .income {
+    color: $green;
+  }
+
+  .expense {
+    color: $red;
+  }
+}
