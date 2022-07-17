@@ -1,13 +1,7 @@
 import { FC, useContext } from 'react';
 import RowData from './AllMethodsRowData'
-import { Context } from '../main'
+import { Context } from '../../main'
 import { observer } from 'mobx-react-lite';
-
-export type DataType = {
-  method: string,
-  price: number,
-  minPrice: number
-}
 
 
 const AllMethods: FC<{loading: boolean}> = ({loading}) => {

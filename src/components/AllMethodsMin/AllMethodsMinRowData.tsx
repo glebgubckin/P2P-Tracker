@@ -1,6 +1,6 @@
-import { DataType } from "./AllMethods"
+import { DataType } from "../../types"
 import { FC } from 'react';
-import RowMin from "./RowMin"
+import RowMin from "../Row/RowMin"
 
 const RowData: FC<{ticker: string, data: DataType[], minData: DataType[]}> = ({ticker, data, minData}) => {
 

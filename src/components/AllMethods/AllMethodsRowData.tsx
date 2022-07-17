@@ -1,5 +1,5 @@
-import { DataType } from "./AllMethods"
-import Row from "./Row"
+import { DataType } from "../../types"
+import Row from "../Row/Row"
 
 const RowData = ({ticker, data}: {ticker: string, data: DataType[]}) => {
   return (

@@ -1,11 +1,12 @@
 import { FC, useEffect, useContext, useState } from 'react';
-import AllMethods from './components/AllMethods'
-import AllMethodsMin from './components/AllMethodsMin'
+import AllMethods from './components/AllMethods/AllMethods'
+import AllMethodsMin from './components/AllMethodsMin/AllMethodsMin'
 import axios from 'axios'
 import { Context } from './main'
 import { observer } from 'mobx-react-lite'
-import OneToOne from './components/OneToOne'
+import OneToOne from './components/OneToOne/OneToOne'
 import Sidebar from './components/Sidebar';
+import ThreeSteps from './components/ThreeSteps/ThreeSteps';
 
 const App: FC = () => {
 
@@ -22,6 +23,7 @@ const App: FC = () => {
       crypto.setP2PData(p2p.data)
       crypto.setP2PDataMin(p2pMin.data)
       crypto.setMarketPrice(market.data)
+      console.log(crypto.marketPrice)
       const date = new Date()
       const time = date.toTimeString()
       setCurrentTime(time.split(' ')[0].slice(0,5))
@@ -45,6 +47,7 @@ const App: FC = () => {
           <OneToOne loading={loading} />
           <AllMethods loading={loading} />
           <AllMethodsMin loading={loading} />
+          {/* <ThreeSteps loading={loading} /> */}
         </div>
       </div>
     </div>

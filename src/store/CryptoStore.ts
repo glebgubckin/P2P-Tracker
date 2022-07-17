@@ -1,10 +1,6 @@
 import { action, makeObservable, observable } from "mobx"
-import { TickerType } from "../components/AllMethodsMin"
+import { TickerType, MarketPrice } from '../types'
 
-type MarketPrice = {
-  symbol: string,
-  price: string
-}
 
 class CryptoStore {
 
