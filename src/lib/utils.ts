@@ -14,7 +14,7 @@ export const spreadCalcThreeSteps = (ticker: string, base: string, currentMethod
   const { crypto } = useContext(Context)
   const basePrice = Number(crypto.p2pData.filter(el => el.ticker === base)[0]?.data.filter(el => el?.method === currentMethod)[0]?.price)
   const marketPair = Object.keys(crypto.marketPrice).filter(pair => sortString(pair) === sortString(`${base}${ticker}`))[0]
-  const marketPrice = Number(crypto.marketPrice[marketPair]) * 1.01
+  const marketPrice = Number(crypto.marketPrice[marketPair]) * 1.001
   const tickerPrice = Number(crypto.p2pData.filter(el => el.ticker === ticker)[0]?.data.filter(el => el?.method === currentMethod)[0]?.minPrice)
   if (marketPair?.indexOf(base)) {
     return Number(((tickerPrice * Number(((1 / basePrice) / marketPrice).toFixed(10)) - 1) * 100).toFixed(3))
