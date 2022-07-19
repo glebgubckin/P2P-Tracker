@@ -17,8 +17,8 @@ export const spreadCalcThreeSteps = (ticker: string, base: string, currentMethod
   const marketPrice = Number(crypto.marketPrice[marketPair]) * 1.001
   const tickerPrice = Number(crypto.p2pData.filter(el => el.ticker === ticker)[0]?.data.filter(el => el?.method === currentMethod)[0]?.minPrice)
   if (marketPair?.indexOf(base)) {
-    return Number(((tickerPrice * Number(((1 / basePrice) / marketPrice).toFixed(10)) - 1) * 100).toFixed(3))
+    return Number((((((1 / basePrice) / marketPrice) * tickerPrice) - 1) * 100).toFixed(3))
   } else {
-    return Number(((tickerPrice * Number(((1 / basePrice) * marketPrice).toFixed(10)) - 1) * 100).toFixed(3))
+    return Number((((((1 / basePrice) * marketPrice) * tickerPrice) - 1) * 100).toFixed(3))
   }
 }
