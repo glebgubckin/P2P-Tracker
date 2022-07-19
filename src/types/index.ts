@@ -1,6 +1,5 @@
 export type MarketPrice = {
-  symbol: string,
-  price: string
+  [symbol: string]: string,
 }
 
 export type TickerType = {

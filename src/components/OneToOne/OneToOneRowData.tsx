@@ -1,5 +1,4 @@
 import { DataType } from "../../types"
-import { spreadCalcTwoSteps } from "../../lib/utils"
 import RowMin from "../Row/RowMin"
 
 const RowData = ({ticker, data, minData}: {ticker: string, data: DataType[], minData: DataType[]}) => {

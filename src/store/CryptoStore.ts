@@ -6,7 +6,7 @@ class CryptoStore {
 
   public p2pData: TickerType[] = []
   public p2pDataMin: TickerType[] = []
-  public marketPrice: MarketPrice[] = []
+  public marketPrice: MarketPrice = {}
 
   constructor() {
     makeObservable(this, {
@@ -27,7 +27,7 @@ class CryptoStore {
     this.p2pDataMin = data
   }
 
-  setMarketPrice(data: MarketPrice[]) {
+  setMarketPrice(data: MarketPrice) {
     this.marketPrice = data
   }
 }

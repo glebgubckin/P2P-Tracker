@@ -23,7 +23,6 @@ const App: FC = () => {
       crypto.setP2PData(p2p.data)
       crypto.setP2PDataMin(p2pMin.data)
       crypto.setMarketPrice(market.data)
-      console.log(crypto.marketPrice)
       const date = new Date()
       const time = date.toTimeString()
       setCurrentTime(time.split(' ')[0].slice(0,5))
@@ -47,7 +46,13 @@ const App: FC = () => {
           <OneToOne loading={loading} />
           <AllMethods loading={loading} />
           <AllMethodsMin loading={loading} />
-          {/* <ThreeSteps loading={loading} /> */}
+          <ThreeSteps base="USDT" />
+          <ThreeSteps base="BTC" />
+          <ThreeSteps base="BUSD" />
+          <ThreeSteps base="BNB" />
+          <ThreeSteps base="ETH" />
+          <ThreeSteps base="RUB" />
+          <ThreeSteps base="SHIB" />
         </div>
       </div>
     </div>
